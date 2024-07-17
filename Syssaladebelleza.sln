@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syssaladebelleza.DAL", "Sys
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syssaladebelleza.BL", "Syssaladebelleza.bl\Syssaladebelleza.BL.csproj", "{9D7712FA-6263-445D-9CFB-381DED50215E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syssaladebelleza.api", "Syssaladebelleza\Syssaladebelleza.api.csproj", "{C7F5BDBC-F06C-4398-B7EB-BE1F913362FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9D7712FA-6263-445D-9CFB-381DED50215E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D7712FA-6263-445D-9CFB-381DED50215E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D7712FA-6263-445D-9CFB-381DED50215E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F5BDBC-F06C-4398-B7EB-BE1F913362FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F5BDBC-F06C-4398-B7EB-BE1F913362FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F5BDBC-F06C-4398-B7EB-BE1F913362FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F5BDBC-F06C-4398-B7EB-BE1F913362FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

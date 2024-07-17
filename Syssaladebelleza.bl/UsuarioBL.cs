@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //***************************
 using Syssaladebelleza.EN;
 using Syssaladebelleza.DAL;
-using Syssaladebelleza.BL;
+
 
 
 namespace SeguridadWeb.LogicaDeNegocio
