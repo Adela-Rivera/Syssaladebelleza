@@ -11,14 +11,15 @@ public partial class Producto
     [Key]
     public int Id { get; set; }
 
+    [ForeignKey("DetalleVenta")]
     public int? IdDetalleVenta { get; set; }
 
     [StringLength(50)]
-  
+
     public string? Nombre { get; set; }
 
     [StringLength(50)]
-  
+
     public string? Descripcion { get; set; }
 
     [Column(TypeName = "decimal(18, 0)")]
@@ -30,11 +31,10 @@ public partial class Producto
     [Column(TypeName = "decimal(18, 0)")]
     public decimal? Codigo { get; set; }
 
-   
     public string? Imagen { get; set; }
 
     [StringLength(50)]
-   
+
     public string? Marca { get; set; }
 
     [Column(TypeName = "datetime")]
@@ -44,6 +44,12 @@ public partial class Producto
     public DateTime? FechaVencimiento { get; set; }
 
     [StringLength(50)]
- 
+
     public string? Categoria { get; set; }
+
+    public DetalleVenta? DetalleVenta { get; set; }
+    [NotMapped]
+    public int Top_Aux { get; set; }
 }
+
+

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Syssaladebelleza.EN;
 
-namespace Syssaladebelleza.EN;
+namespace Syssaladebelleza.DAL;
 
 public partial class BdContext : DbContext
 {

@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+// ************
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
+using Syssaladebelleza.EN;
 
-namespace Syssaladebelleza.EN;
-
-public partial class Rol
+namespace Syssaladebelleza.EN
 {
-    [Key]
-    public int Id { get; set; }
-
-    [StringLength(30)]
-    
-    public string Nombre { get; set; } = null!;
-
-    public ICollection<Usuario> Usuario { get; set; } = new List<Usuario>();
+    public class Rol
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required(ErrorMessage = "Nombre es obligatorio")]
+        [StringLength(30, ErrorMessage = "Maximo 30 caracteres")]
+        public string? Nombre { get; set; }
+        [NotMapped]
+        public int Top_Aux { get; set; }
+        public List<Usuario>? Usuario { get; set; }
+    }
 }
