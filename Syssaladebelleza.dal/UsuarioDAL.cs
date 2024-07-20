@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//*****************************
-using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
+﻿using Microsoft.EntityFrameworkCore;
+
 using Syssaladebelleza.DAL;
 using Syssaladebelleza.EN;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Syssaladebelleza.DAL
 {
     public class UsuarioDAL

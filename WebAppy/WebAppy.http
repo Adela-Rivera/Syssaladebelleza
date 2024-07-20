@@ -1,0 +1,6 @@
+@WebAppy_HostAddress = http://localhost:5155
+
+GET {{Syssaladebelleza_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
