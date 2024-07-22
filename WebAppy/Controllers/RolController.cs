@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 using Syssaladebelleza.DAL;
 using Syssaladebelleza.EN;
 
@@ -11,17 +14,17 @@ namespace Syssaladebelleza.Controllers
         [HttpGet(Name = "GetRol")]
         public async Task<List<Rol>> Get()
         {
-            var ListaRol = await RolDAL.ObtenerTodosAsync();
-            if (ListaRol.Count >= 1)
+            
+            var listarol = await RolDAL.ObtenerTodosAsync();
+            if (listarol.Count >= 1)
             {
-                return ListaRol;
+                return listarol;
             }
             else
             {
                 return new List<Rol>();
             }
         }
-
         [HttpPost(Name = "PostRol")]
         public async Task<int> Post(Rol pRol)
         {
@@ -34,6 +37,35 @@ namespace Syssaladebelleza.Controllers
             {
                 return 0;
             }
+
+        }
+
+        [HttpPut(Name = "PutRoles")]
+        public async Task<int> Put(int id, [FromBody] Rol pRol)
+        {
+
+            if (pRol.Id >= 0)
+            {
+                int resultado = await RolDAL.ModificarAsync(pRol);
+                return resultado;
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+
+        [HttpDelete(Name = "DeleteRoles")]
+        public async Task<int> Delete(int id, Rol pRol)
+        {
+            if (id >= 1)
+            {
+
+                int resultado = await RolDAL.EliminarAsync(pRol);
+                return 1;
+            }
+            return 0;
         }
     }
 }
