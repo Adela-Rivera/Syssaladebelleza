@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Syssaladebelleza.BL
 {
-    internal class ProductoBL
+    public class ProductoBL
     {
 
 
