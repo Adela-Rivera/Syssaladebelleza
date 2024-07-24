@@ -46,6 +46,7 @@ namespace Syssaladebelleza.Controllers
 
             if (pRol.Id >= 0)
             {
+                pRol.Id = id;
                 int resultado = await RolDAL.ModificarAsync(pRol);
                 return resultado;
             }
@@ -57,11 +58,12 @@ namespace Syssaladebelleza.Controllers
         }
 
         [HttpDelete(Name = "DeleteRoles")]
-        public async Task<int> Delete(int id, Rol pRol)
+        public async Task<int> Delete(int id)
         {
             if (id >= 1)
             {
-
+                Rol pRol = new Rol();
+                pRol.Id = id;
                 int resultado = await RolDAL.EliminarAsync(pRol);
                 return 1;
             }
